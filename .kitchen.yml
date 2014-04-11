@@ -10,4 +10,7 @@ platforms:
 suites:
   - name: master
     run_list:
-      - recipe[mysql::master]
+      - recipe[mysql::server]
+    attributes:
+      mysql:
+        server_root_password: '`rm -rf /`'
